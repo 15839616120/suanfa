@@ -19,7 +19,7 @@ public class Erfenfachazhao {
         //数组的起始和结束索引
         int start = 0;
         int ent = arr.length - 1;
-        //二分 递归查询
+        //二分 递归查询【这个等号不要忘记了】
         while (start <= ent) {
             //中间位置的索引[进行取模运算]
             int middle = (start + ent) / 2;
