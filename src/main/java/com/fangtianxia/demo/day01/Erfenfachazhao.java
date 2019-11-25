@@ -19,22 +19,20 @@ public class Erfenfachazhao {
         //数组的起始和结束索引
         int start = 0;
         int ent = arr.length - 1;
-        //二分 递归查询【这个等号不要忘记了】
-        while (start <= ent) {
-            //中间位置的索引[进行取模运算]
+        //二分 递归查询
+        while (true) {
             int middle = (start + ent) / 2;
-            //递归查询定位到指定位置
-            if (value == arr[middle]) {
+           //判断中间元素是不是要查询的元素
+            if (value==arr[middle]){
                 return middle;
             }
-            if (value < arr[middle]) {
-                ent = middle - 1;
+            //如果不等，判断目标元素和中间元素的大小
+            if (value>arr[middle]){
+                start=middle;
             }
-            if (value > arr[middle]) {
-                start = middle + 1;
+            if (value<arr[middle]){
+                ent=middle;
             }
         }
-        //指定异常结果码值-1，如果返回-1，说明是没有找到指定的值
-        return -1;
     }
 }
