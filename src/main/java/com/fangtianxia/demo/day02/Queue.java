@@ -2,6 +2,7 @@ package com.fangtianxia.demo.day02;
 
 /**
  * @author wyz
+ * 队列数据结构
  * 队列的特点：先进先出
  */
 public class Queue {
