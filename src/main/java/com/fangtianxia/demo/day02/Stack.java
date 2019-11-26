@@ -3,6 +3,7 @@ package com.fangtianxia.demo.day02;
 /**
  * @author wyz
  * 本类实现的功能：实现 栈 数据结构的运算
+ * 栈的特点：先进后出
  */
 public class Stack {
 
