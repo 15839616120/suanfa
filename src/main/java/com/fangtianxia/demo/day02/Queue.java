@@ -11,7 +11,22 @@ public class Queue {
      */
     static int[] elements = new int[0];
 
+    public static void main(String[] args) {
+        // 入队
+        int[] add = add(1);
+        for (int i = 0; i < add.length; i++) {
+            System.out.println(elements[i]);
+        }
 
+        // 出队
+        int delete = delete();
+        System.out.println(delete);
+
+        // 打印执行入队和出队之后的元素
+        for (int i = 0; i < elements.length; i++) {
+            System.out.println(elements[i]);
+        }
+    }
     /**
      * 入队
      * 返回值为新数组所有的元素
@@ -23,6 +38,8 @@ public class Queue {
         for (int i = 0; i < elements.length; i++) {
             arr[i] = elements[i];
         }
+        //将新元素放到新数组中
+        arr[elements.length] = element;
         //使用新的数组替换旧的数组
         elements = arr;
         return elements;
@@ -37,10 +54,10 @@ public class Queue {
         //取出索引为0的元素
         int element = elements[0];
         //创建一个新的数组
-        int[] arr = new int[elements.length - 1];
+        int[] arr = new int[elements.length-1];
         //把原有数组中的元素复制到新的数组中
-        for (int i = 0; i < elements.length; i++) {
-            arr[i] = elements[i + 1];
+        for (int i = 0; i < elements.length-1; i++) {
+            arr[i] = elements[i];
         }
         //使用新的数组替换旧的数组
         elements = arr;
