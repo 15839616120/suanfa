@@ -1,10 +1,13 @@
 package com.fangtianxia.demo.day03;
 
+import lombok.Data;
+
 /**
  * @author wyz
  * 节点类
  * 单链表
  */
+@Data
 public class Node {
 
     //节点内容
@@ -28,6 +31,13 @@ public class Node {
      */
     public Node next() {
         return this.next;
+    }
+
+    /**
+     * 判断当前节点是否是最后一个节点
+     */
+    public boolean isLast() {
+        return next == null;
     }
 }
 
