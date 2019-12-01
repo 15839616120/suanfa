@@ -22,8 +22,24 @@ public class Node {
     /**
      * 为节点追加节点
      */
-    public void append(Node node) {
-        this.next = node;
+    public Node append(Node node) {
+        //当前节点
+        Node currentNode = this;
+        //循环往后找
+        while(true){
+            //取出下一个节点
+            Node nextNode = this.next;
+            //如果下一个节点为null，当前节点已经是最后一个节点
+            if (nextNode==null){
+                break;
+            }
+            //如果下一个节点不为null，将下一个节点赋值给当前节点的next属性
+            this.next=node;
+        }
+        return currentNode;
+        //也可以返回this
+        //return this;
+
     }
 
     /**
