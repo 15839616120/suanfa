@@ -19,8 +19,15 @@ public class TestNode {
 //        System.out.println(node3.isLast());
 //        System.out.println(node2.isLast());
 
+        //显示所有节点
         node1.show();
-        node1.removeNextNode();
+        //删除一个节点
+//        node1.removeNextNode();
+        //显示所有节点
+//        node1.show();
+        //插入一个新节点
+        node1.afterAppend(new Node(7));
+        //显示所有节点
         node1.show();
     }
 
