@@ -28,12 +28,12 @@ public class Node {
      */
     public Node append(Node node) {
         //循环往后找
-        while(true){
+        while (true) {
             //取出下一个节点
             Node nextNode = this.next;
             //如果下一个节点为null，当前节点已经是最后一个节点,将下一个节点（传进来的值）赋值给当前节点的next属性
-            if (nextNode==null){
-                this.next=node;
+            if (nextNode == null) {
+                this.next = node;
                 break;
             }
         }
@@ -45,6 +45,16 @@ public class Node {
      */
     public boolean isLast() {
         return next == null;
+    }
+
+    /**
+     * 删除下一个节点
+     */
+    public void removeNextNode() {
+        //取出下下一个节点
+        Node newNext = this.next.next;
+        //将下下一个节点设置为当前节点的下一个节点【这样就把下一个节点给删除了】
+        this.next = newNext;
     }
 }
 
