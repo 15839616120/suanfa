@@ -63,20 +63,17 @@ public class Node {
     public void show(){
         //当前节点
         Node currentNode =this;
-        //下一个节点
-        Node nextNode;
         //循环
         while(true){
             System.out.print(currentNode.getData());
-            //取出下一个节点
-            nextNode = currentNode.next;
+            //取出下一个节点,然后赋值给当前节点，继续循环
+            currentNode = currentNode.next;
             //判断是否为最后一个节点
-            if (nextNode==null){
+            if (currentNode==null){
                 //如果是最后一个节点
                 break;
             }
         }
-        System.out.println(nextNode);
     }
 
 }

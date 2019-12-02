@@ -12,15 +12,16 @@ public class TestNode {
         Node node2 = new Node(2);
         Node node3 = new Node(3);
         //追加节点
-        node1.append(node2);
-        node2.append(node3);
-
+        node1.append(node2).append(node3).append(new Node(4));
         //取出下一个节点
-        System.out.println(node1.getData());
-        System.out.println(node1.getNext().getData());
-        System.out.println(node3.isLast());
-        System.out.println(node2.isLast());
+//        System.out.println(node1.getData());
+//        System.out.println(node1.getNext().getData());
+//        System.out.println(node3.isLast());
+//        System.out.println(node2.isLast());
 
+        node1.show();
+        node1.removeNextNode();
+        node1.show();
     }
 
 }
